@@ -2,8 +2,8 @@
 package objTracker;
 public class Triangle {
 
-	double sides[];
-	double angles[];
+	double sides[]= new double[3];
+	double angles[]= new double[3];
 
 	public Triangle(double sideA, double sideB, double sideC, double angleA, double angleB, double angleC)
 	{
@@ -14,8 +14,12 @@ public class Triangle {
 			angleB=180.0-angleA-angleC;
 		if(angleC==0.0)
 			angleC=180.0-angleB-angleA;
-		double[] angles={angleA, angleB, angleC};
-		double[] sides={sideA, sideB, sideC};
+		angles[0]=angleA;
+                angles[1]=angleB;
+                angles[2]=angleC;
+		sides[0]=sideA;
+                sides[1]=sideB;
+                sides[2]=sideC;
 		int knownSide=3;
 		for(int i=0;i<3;i++)
 			if(sides[i]!=0.0)
