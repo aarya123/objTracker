@@ -27,6 +27,9 @@ public class ObjTrackerMain {
                     System.out.println("Height with side #"+(i+1)+" as the base");
                     System.out.println(triangle.getHeight(i));
                 }
+                for(int i=0;i<3;i++){
+                    System.out.println("Coordinates for point #"+(i+1));
+                    System.out.println("("+triangle.getCoordinates(i)[0]+", "+triangle.getCoordinates(i)[1]+")");
+                }
 	}
-
 }
