@@ -60,28 +60,4 @@ public class Triangle {
     public double getAngle(int index) {
         return angles[index];
     }
-
-    public double[] getCoordinates(int pointIndex) {
-        int x = 0, y = 1;
-        double[] coordinates = new double[2];
-        if (pointIndex == 0) {
-            coordinates[x] = 0;
-            coordinates[y] = 0;
-            return coordinates;
-        } else if (pointIndex == 1) {
-            coordinates[x] = sides[2];
-            coordinates[y] = 0;
-            return coordinates;
-        } else {
-            if (angles[0] > 90) {
-                coordinates[x] = Math.sqrt(Math.pow(sides[1], 2) - Math.pow(getHeight(2), 2));
-            } else if (angles[0] == 90) {
-                coordinates[x] = 0;
-            } else {
-                coordinates[x] = Math.sqrt(Math.pow(sides[0], 2) - Math.pow(getHeight(2), 2));
-            }
-            coordinates[y] = getHeight(2);
-            return coordinates;
-        }
-    }
 }
